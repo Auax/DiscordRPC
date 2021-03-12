@@ -1,5 +1,5 @@
 # Discord Rich Presence
-####By Zelliux
+#### By Zelliux
 
 ---
 This project aims to have an easy and quick configuration, 
@@ -33,7 +33,7 @@ and select your image. (Remember the name you set for the image, you'll need it 
 
     <img src="https://i.ibb.co/3rpFZVg/Capture.png" height="40" />
 
-###That's all you need to configure in the Discord Developer Portal
+### That's all you need to configure in the Discord Developer Portal
 
 5) Now, head to the ***config.json*** file, located inside the repository folder. 
 Configure the file as you want. Don't forget to replace the ***clientID*** value with the 
@@ -43,7 +43,7 @@ Configure the file as you want. Don't forget to replace the ***clientID*** value
 6) Once everything is done, run the ***main.py*** file (with the Discord Launcher opened), 
    and you should see the changes.
   
- ###Config.json arguments
+ ### Config.json arguments
 
 - **clientID:** the ID of your application. *(Mandatory, without the correct ID, the code won't work)*
 
