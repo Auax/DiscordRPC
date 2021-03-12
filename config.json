@@ -1,15 +1,15 @@
 {
   "Identifiers": {
-    "clientID": 804731849943285830
+    "clientID": 000000000000000000
   },
 
   "State": {
-    "state": "Playing Undertale",
+    "state": "<your state>",
     "startTimeStamp": 0
   },
 
   "Images": {
-  "largeImage": "undertale",
+  "largeImage": "<your image>",
   "smallImage": null
   }
 }
