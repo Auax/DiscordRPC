@@ -1,13 +1,12 @@
-from colorama import Fore, Back, init
+from colorama import Fore, Back, init, Style
 
-# Required for CMD. Otherwise colors won't be formatted
+# Required for the console. Otherwise colors won't be formatted
 init(convert=True)
 
 
 class Color:
     def __init__(self, verbose: bool = False):
         self.verbose = verbose
-        self.previous_color = None
 
     def set_color(self, output_mode: str, text: str, color: str) -> str:
         """
@@ -29,13 +28,7 @@ class Color:
             mode = Back
 
         # Create the colored text
-        if self.previous_color:
-            c_text = col + text + self.previous_color
-
-        else:
-            c_text = col + text + mode.WHITE
-            # Set previous color
-            self.previous_color = mode.WHITE
+        c_text = col + text + Style.RESET_ALL
 
         # Print colored text
         if self.verbose:
@@ -53,4 +46,4 @@ class Color:
         """
         Change background text color
         """
-        return self.set_color("fore", text, color)
+        return self.set_color("back", text, color)

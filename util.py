@@ -1,8 +1,6 @@
 # Util File
 
 import json
-import time
-
 import color
 
 col = color.Color()
@@ -20,28 +18,16 @@ def logger(identifier, value, mode="normal") -> str:
     assert mode == "normal" or "success" or "error", 'Mode must be "error", "success" or "normal".'
 
     if mode.lower() == 'normal':
-        d = f"DEBUG:: {identifier}: {value}"
+        d = f"[{col.fore_color('^', 'YELLOW')}] {identifier}: {value}"
 
     elif mode.lower() == 'error':
-        d = f"DEBUG:: {col.fore_color(str(identifier), 'RED')}: {col.fore_color(str(value), 'RED')}"
+        d = f"[{col.fore_color('!', 'RED')}] {col.fore_color(str(identifier), 'RED')}: {col.fore_color(str(value), 'RED')}"
 
     elif mode.lower() == 'success':
-        d = f"DEBUG:: {col.fore_color(str(identifier), 'GREEN')}: {col.fore_color(str(value), 'GREEN')}"
+        d = f"[{col.fore_color('$', 'GREEN')}] {identifier}: {col.fore_color(str(value), 'GREEN')}"
 
     print(d)
     return d
-
-
-def slow_type(text: str, delay: int = 100) -> None:
-    """
-    Typing animation with a defined delay
-    :param text: the text to be displayed
-    :param delay: sets the delay between each letter (in milliseconds)
-    :return None
-    """
-    for char in range(len(text)):
-        print(text[char], end="")
-        time.sleep(delay / 1000)
 
 
 def load_json(path: str) -> dict:
