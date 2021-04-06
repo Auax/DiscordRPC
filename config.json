@@ -1,0 +1,15 @@
+{
+  "Identifiers": {
+    "clientID": "000000000000000000"
+  },
+
+  "State": {
+    "state": "<your state>",
+    "startTimeStamp": 0
+  },
+
+  "Images": {
+  "largeImage": "<your image>",
+  "smallImage": null
+  }
+}
