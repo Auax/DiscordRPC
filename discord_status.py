@@ -2,8 +2,8 @@
 Discord Status app created by Zelliux
 """
 
-import datetime
 # Imports
+import datetime
 import math
 import sys
 import time
