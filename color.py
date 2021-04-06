@@ -1,7 +1,10 @@
 from colorama import Fore, Back, init, Style
+import sys
 
 # Required for the console. Otherwise colors won't be formatted
-init(convert=True)
+
+convert = True if sys.platform == "win32" else False
+init(convert=convert, autoreset=True)
 
 
 class Color:

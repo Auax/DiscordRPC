@@ -2,13 +2,14 @@
 Discord Status app created by Zelliux
 """
 
+import datetime
 # Imports
 import math
 import sys
 import time
-import datetime
-from pypresence import Presence, ServerError, InvalidID, exceptions
+
 import pyfiglet
+from pypresence import Presence, ServerError, InvalidID, exceptions
 
 from __init__ import *
 
@@ -67,14 +68,15 @@ class DiscordPresence:
             util.logger("ClientID", self.clientID[:int(len(self.clientID) / 2)] + "...")
             util.logger("State", self.state)
 
-            RPC = Presence(self.clientID)  # Initialize the client class
+            rpc = Presence(self.clientID)  # Initialize the client class
 
             try:
-                RPC.connect()  # Start the handshake loop
+                rpc.connect()  # Start the handshake loop
 
             except exceptions.InvalidPipe:
                 util.logger("Error",
                             "An error has occurred while trying to connect to Discord. Make sure your Discord client is running!",
+                            # nopep8
                             "error")
                 sys.exit(0)
 
@@ -109,7 +111,7 @@ class DiscordPresence:
 
                 try:
                     # Update status every second
-                    RPC.update(large_image=self.largeImage, details=self.state,
+                    rpc.update(large_image=self.largeImage, details=self.state,
                                state=display_time)
                     played_seconds += datetime.timedelta(seconds=1)
 
@@ -125,7 +127,7 @@ class DiscordPresence:
                     util.logger("Error", "Connection closed. Possible cause: Invalid ID", "error")
                     break
 
-                except:
+                except Exception as E:
                     util.logger("Error", f"Unexpected error: {col.fore_color(str(E), 'BLUE')}", "error")
                     break
 
@@ -149,8 +151,11 @@ if __name__ == "__main__":
             # Connect to Discord!
             dp.connect()
 
+        except FileNotFoundError:
+            util.logger("Error", "Couldn't connect to the Discord Client. Are you running it in this OS?", "error")
+
         except Exception as E:
-            util.logger("error", f"Unexpected error\nTraceback:{E}")
+            util.logger("Error", f"Unexpected error: {col.fore_color(str(E), 'WHITE')}", "error")
 
     except KeyboardInterrupt:
         pass

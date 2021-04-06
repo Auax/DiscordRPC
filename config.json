@@ -1,15 +1,15 @@
 {
   "Identifiers": {
-    "clientID": 100000000000000000
+    "clientID": 819993154291367956
   },
 
   "State": {
-    "state": "<your state>",
-    "startTimeStamp": 0
+    "state": "How do I close Terraria",
+    "startTimeStamp": 244060
   },
 
   "Images": {
-  "largeImage": "<your large image>",
+  "largeImage": "terraria",
   "smallImage": null
   }
 }
