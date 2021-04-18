@@ -111,7 +111,7 @@ class DiscordPresence:
 
                 try:
                     # Update status every second
-                    rpc.update(large_image=self.largeImage, details=self.state,
+                    rpc.update(large_image=self.largeImage, small_image=self.smallImage, details=self.state,
                                state=display_time)
                     played_seconds += datetime.timedelta(seconds=1)
 
