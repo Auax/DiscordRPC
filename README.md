@@ -1,5 +1,5 @@
 # Discord Rich Presence
-#### By Zelliux
+#### By Auax
 
 ---
 This project aims to have an easy and quick configuration, 
@@ -58,4 +58,4 @@ Configure the file as you want. Don't forget to replace the `clientID` value wit
 <img src="https://i.ibb.co/nggSxmK/Capture.png" height="100" />
 
 ---
-Made with ❤ by <a href="https://github.com/Zelliux">Auax<a>
+Made with ❤ by <a href="https://github.com/auax">Auax<a>
