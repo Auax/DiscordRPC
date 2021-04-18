@@ -58,4 +58,4 @@ Configure the file as you want. Don't forget to replace the `clientID` value wit
 <img src="https://i.ibb.co/nggSxmK/Capture.png" height="100" />
 
 ---
-Made with ❤ by <a href="https://github.com/Zelliux">Zelliux<a>
+Made with ❤ by <a href="https://github.com/Zelliux">Auax<a>
