@@ -148,7 +148,8 @@ if __name__ == "__main__":
         os.system("cls" if os.name == "nt" else "clear")  # Clear console
 
         # print(pyfiglet.figlet_format("Alpha sniper", font="big"))
-        print("Zellius")
+        print("Auax")
+        print("Discord RPC: https://github.com/auax/DiscordRichPresence")
         print("-" * 50 + "\n")  # Escape
 
         try:
