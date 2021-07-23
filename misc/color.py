@@ -1,10 +1,8 @@
 from colorama import Fore, Back, init, Style
 import sys
 
-# Required for the console. Otherwise colors won't be formatted
-
 convert = True if sys.platform == "win32" else False
-init(convert=convert, autoreset=True)
+init(convert=convert, autoreset=True)  # Autoreset color after printing
 
 
 class Color:
@@ -17,18 +15,17 @@ class Color:
         - output_mode: can either be "fore" or "back" mode
         """
 
-        assert "fore" in output_mode or "back" in output_mode, "Please set either fore or back mode"  # Assert the mode is correctly set
-        assert isinstance(text, str) and isinstance(color,
-                                                    str), "Specified type is not supported"  # Assert arguments type is correct
+        # Assert the mode is correctly set
+        assert "fore" in output_mode or "back" in output_mode, "Please set either 'fore' or 'back' mode"
+        # Assert argument types are correct
+        assert isinstance(text, str) and isinstance(color, str), "Specified type is not supported"
 
         # Assign a mode
         if output_mode == "fore":
             col = getattr(Fore, color)
-            mode = Fore
 
         else:
             col = getattr(Back, color)
-            mode = Back
 
         # Create the colored text
         c_text = col + text + Style.RESET_ALL
