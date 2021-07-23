@@ -2,7 +2,7 @@
 Python Discord Status
 ----------------------
 By Ibai Farina
-The version 1.2 Adds new functionallity and a refactor of some files.
+Version 1.2 adds new functionality and a refactor of some files.
 Discord-Status-v1.2 lets you add buttons to your RPC.
 """
 
