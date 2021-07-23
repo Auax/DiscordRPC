@@ -1,0 +1,17 @@
+{
+  "Identifiers": {
+    "clientID": "<your client id>"
+  },
+  "State": {
+    "state": "Discord RPC by Auax!",
+    "startTimeStamp": 0,
+    "stateRndSeq": null,
+    "useTime": true,
+    "intervalTime": 1,
+    "buttons": null
+  },
+  "Images": {
+    "largeImage": "<your image name>",
+    "smallImage": null
+  }
+}
