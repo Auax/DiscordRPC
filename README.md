@@ -62,6 +62,16 @@ Configure the file as you want. Don't forget to replace the `clientID` value wit
 
 ---
 
+# Troubleshooting
+* **I get thrown an error**
+  - Check Discord is running on the same device you are trying to run this app.
+  - Make sure the `clientID` info is correct.
+  - If this doesn't fix the error. You can create an *issue* on GitHub. I'll fix it as fast as I can.
+
+* **The state doesn't appear on Discord**
+  - Make sure the `clientID` info is correct.
+  - Check if you have enabled the `Activity Status` on Discord. To find it navigate to *User Setting > Activity Status > Display current activity as a status message*.
+
 # My presets
 ### Notice that the presets will most probably come with an image. You'll need to upload the asset with the same name as the file. 
 I've created some presets that you can download from the `presets` branch.
