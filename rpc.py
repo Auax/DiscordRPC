@@ -64,9 +64,6 @@ class DiscordPresence:
             logger.logger("Error", "value types are incorrect", "error")
             raise ValueError
 
-        # Raise an error if the length ClientID is not 18
-        assert len(self.client_id_) == 18 and self.state, "Please fill the correct values"
-
         # Assign default time stamp if it's none
         if not self.startTimeStamp:
             self.startTimeStamp = 0
